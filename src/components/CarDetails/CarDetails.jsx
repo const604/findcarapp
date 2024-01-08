@@ -15,8 +15,9 @@ import {
 import { ReactComponent as Vector } from '../../images/Vector 4.svg';
 import { useSelector } from 'react-redux';
 import { selectCars } from 'redux/selectors';
+import { ReactComponent as XIcon } from '../../images/x.svg';
 
-const CarDetails = ({ id }) => {
+const CarDetails = ({ onClose, id }) => {
   const cars = useSelector(selectCars);
 
   const car = cars.find(car => car.id === id);
@@ -36,7 +37,7 @@ const CarDetails = ({ id }) => {
     rentalConditions,
     mileage,
   } = car;
-  
+
   const newMileage = new Intl.NumberFormat('en-US').format(mileage);
   const newPrice = `${rentalPrice.slice(1)}$`;
   // const location = useLocation();
@@ -59,6 +60,14 @@ const CarDetails = ({ id }) => {
 
   return (
     <CardContainer key={id}>
+      <XIcon
+        onClick={() => onClose()}
+        style={{
+          position: 'absolute',
+          right: 16,
+          top: 16,
+        }}
+      />
       <ImgContainer>
         <img
           src={img}
@@ -75,7 +84,6 @@ const CarDetails = ({ id }) => {
             <CarName> {model}, </CarName>
             {year}
           </CarBrand>
-          {/* <CarPrice>{rentalPrice}</CarPrice> */}
         </BlockName>
         <BlockAbout>
           <Block>
@@ -101,7 +109,7 @@ const CarDetails = ({ id }) => {
         <Block>
           <h3>Accessories and functionalities:</h3>
           <BlockAbout>
-            {accessories.map((item, i) => {
+            {accessories?.map((item, i) => {
               return (
                 <>
                   <p key={i}>{item}</p>
@@ -111,7 +119,7 @@ const CarDetails = ({ id }) => {
             })}
           </BlockAbout>
           <BlockAbout>
-            {functionalities.map((item, i) => {
+            {functionalities?.map((item, i) => {
               return (
                 <>
                   <p key={i}>{item}</p>
@@ -124,7 +132,7 @@ const CarDetails = ({ id }) => {
           <h3>Rental Conditions:</h3>
         </Block>
         <BlockAbout>
-          {rentalConditions.split('\n').map((item, i) => {
+          {rentalConditions?.split('\n').map((item, i) => {
             return (
               <li key={i}>
                 <p>{item}</p>
@@ -143,7 +151,9 @@ const CarDetails = ({ id }) => {
           </li>
         </BlockAbout>
       </InfoBlock>
-      <LearnMoreButton type="submit">Rental car</LearnMoreButton>
+      <LearnMoreButton href={'tel:+380730000000'} target="_blank">
+        Rental car
+      </LearnMoreButton>
     </CardContainer>
   );
 };

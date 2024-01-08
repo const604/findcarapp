@@ -53,7 +53,7 @@ const CarCard = ({
       ? dispatch(addFavorites({ ...car, isFavorites: !isFavorites }))
       : dispatch(deleteFavorites(car));
   };
-
+  
   // useEffect(() => {
   //   if (!carId) {
   //     return;
@@ -116,7 +116,7 @@ const CarCard = ({
               <Vector />
               <p>{id}</p>
               <Vector />
-              <p>{functionalities[0].split(' ').splice(0, 2).join(' ')}</p>
+              <p>{functionalities[0]?.split(' ').splice(0, 2).join(' ')}</p>
             </BlockAbout>
           </Block>
         </BlockAbout>

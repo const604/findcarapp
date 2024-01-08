@@ -1,5 +1,5 @@
 import CarCard from 'components/CarCard/CarCard';
-import { Gallery } from 'components/Catalog/Catalog.styled';
+import { Gallery } from 'pages/Catalog/Catalog.styled';
 import { useSelector } from 'react-redux';
 import { selectFavorites } from 'redux/selectors';
 

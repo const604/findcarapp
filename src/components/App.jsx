@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import { getCars } from 'redux/operations';
 
 const Home = lazy(() => import('pages/Home/Home'));
-const Catalog = lazy(() => import('components/Catalog/Catalog'));
+const Catalog = lazy(() => import('pages/Catalog/Catalog'));
 const CarDetails = lazy(() => import('components/CarDetails/CarDetails'));
 const Favorites = lazy(() => import('pages/Favorites/Favorites'));
 // const Reviews = lazy(() => import('./Reviews/Reviews'));
@@ -13,11 +13,9 @@ const Favorites = lazy(() => import('pages/Favorites/Favorites'));
 export const App = () => {
   const dispatch = useDispatch();
 
-  
   // useEffect(() => {
   //   dispatch(getCars());
   // }, [dispatch]);
-
 
   return (
     <Routes>

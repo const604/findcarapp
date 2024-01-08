@@ -251,7 +251,7 @@ export const Gallery = styled.div`
   z-index: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 1184px;
   gap: 29px;
