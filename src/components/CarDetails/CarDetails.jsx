@@ -1,3 +1,5 @@
+import { useSelector } from 'react-redux';
+import { selectCars } from 'redux/selectors';
 import {
   ImgContainer,
   InfoBlock,
@@ -5,16 +7,12 @@ import {
   BlockAbout,
   CarBrand,
   CarName,
-  // CarPrice,
   Block,
-  LearnMoreButton,
+  RentalButton,
   CardContainer,
   Description,
 } from './CarDetails.styled';
-// import icons from 'Vector 4.svg';
 import { ReactComponent as Vector } from '../../images/Vector 4.svg';
-import { useSelector } from 'react-redux';
-import { selectCars } from 'redux/selectors';
 import { ReactComponent as XIcon } from '../../images/x.svg';
 
 const CarDetails = ({ onClose, id }) => {
@@ -42,21 +40,6 @@ const CarDetails = ({ onClose, id }) => {
   const newPrice = `${rentalPrice.slice(1)}$`;
   // const location = useLocation();
   // const backLinkRef = useRef(location.state?.from ?? '/movies');
-
-  // useEffect(() => {
-  //   if (!carId) {
-  //     return;
-  //   }
-  //   async function fetchData() {
-  //     try {
-  //       const response = await getMovieDetails(carId);
-  //       setCar(response.data);
-  //     } catch (error) {
-  //       console.error(error);
-  //     }
-  //   }
-  //   fetchData();
-  // }, [carId]);
 
   return (
     <CardContainer key={id}>
@@ -111,20 +94,20 @@ const CarDetails = ({ onClose, id }) => {
           <BlockAbout>
             {accessories?.map((item, i) => {
               return (
-                <>
-                  <p key={i}>{item}</p>
+                <li key={i}>
+                  <p>{item}</p>
                   <Vector />
-                </>
+                </li>
               );
             })}
           </BlockAbout>
           <BlockAbout>
             {functionalities?.map((item, i) => {
               return (
-                <>
-                  <p key={i}>{item}</p>
+                <li key={i}>
+                  <p>{item}</p>
                   <Vector />
-                </>
+                </li>
               );
             })}
             <Vector />
@@ -151,9 +134,7 @@ const CarDetails = ({ onClose, id }) => {
           </li>
         </BlockAbout>
       </InfoBlock>
-      <LearnMoreButton href={'tel:+380730000000'} target="_blank">
-        Rental car
-      </LearnMoreButton>
+      <RentalButton href={'tel:+380730000000'}>Rental car</RentalButton>
     </CardContainer>
   );
 };

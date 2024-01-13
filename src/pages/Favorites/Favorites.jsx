@@ -5,7 +5,6 @@ import { selectFavorites } from 'redux/selectors';
 
 const Favorites = () => {
   const favorites = useSelector(selectFavorites);
-  console.log(favorites);
 
   return (
     <Gallery>

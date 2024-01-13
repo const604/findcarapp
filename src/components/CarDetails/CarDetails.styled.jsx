@@ -1,32 +1,20 @@
 import styled from 'styled-components';
-import 'modern-normalize';
+// import 'modern-normalize';
+
 
 export const CardContainer = styled.div`
-  /* display: flex; */
-  width: 541px;
-  height: 752px;
+  max-width: 541px;
+  max-height: 752px;
   flex-direction: column;
   align-items: flex-start;
   gap: 28px;
   background-color: #fff;
   border-radius: 24px;
   padding: 40px;
-
-  /* & button {
-    width: 100%;
-    background-color: #3470ff;
-    color: white;
-    transition: all 250ms linear;
-
-    &:hover,
-    &:focus {
-      background-color: #0b44cd;
-    }
-  } */
+  overflow: auto;
 `;
 
 export const ImgContainer = styled.div`
-  /* position: relative; */
   border-radius: 14px;
   overflow: hidden;
   margin-bottom: 14px;
@@ -46,28 +34,6 @@ export const ImgContainer = styled.div`
     object-fit: cover;
   }
 `;
-
-// export const Car = styled.img`
-//   object-fit: cover;
-//   border-radius: 14px;
-//   background: linear-gradient(
-//       180deg,
-//       rgba(18, 20, 23, 0.5) 2.5%,
-//       rgba(18, 20, 23, 0) 41.07%
-//     ),
-//     #f3f3f2;
-//   transition: transform 1s ease-in-out;
-// `;
-
-// export const Gallery = styled.div`
-//   display: flex;
-//   flex-wrap: wrap;
-//   justify-content: space-between;
-//   justify-items: stretch;
-//   gap: 20px;
-//   padding-right: 24px;
-//   padding-left: 24px;
-// `;
 
 export const InfoBlock = styled.div`
   display: flex;
@@ -123,7 +89,6 @@ export const BlockAbout = styled.ul`
   flex-wrap: wrap;
   align-items: center;
   gap: 6px;
-  /* margin-bottom: 4px; */
   & li {
     display: flex;
     padding: 7px 14px;
@@ -144,7 +109,7 @@ export const BlockAbout = styled.ul`
   }
 `;
 
-export const LearnMoreButton = styled.button`
+export const RentalButton = styled.a`
   display: inline-flex;
   padding: 12px 50px;
   margin-top: 24px;

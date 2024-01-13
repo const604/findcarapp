@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
-import { StyledLink, Home, Header } from '../pages/Catalog/Catalog.styled';
+import { StyledLink, Home, Header } from './pages/Catalog/Catalog.styled';
+// import { ReactComponent as HeartIcon } from '../../images/heart.svg';
 
 export const Layout = () => {
   return (

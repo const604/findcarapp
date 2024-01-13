@@ -17,11 +17,11 @@ import {
   PriceContainer,
 } from './Catalog.styled';
 import CarCard from 'components/CarCard/CarCard';
-import { ReactComponent as ChevronDown } from '../../images/chevron-down.svg';
-import { ReactComponent as ChevronUp } from '../../images/chevron-up.svg';
 import { getCars } from 'redux/operations';
 import { selectCars, selectFilter } from 'redux/selectors';
 import { setFilter } from 'redux/filtersSlice';
+import { ReactComponent as ChevronDown } from '../../images/chevron-down.svg';
+import { ReactComponent as ChevronUp } from '../../images/chevron-up.svg';
 
 const Catalog = () => {
   const cars = useSelector(selectCars);

@@ -13,7 +13,6 @@ import {
   LearnMoreButton,
   CardContainer,
 } from './CarCard.styled';
-// import icons from 'Vector 4.svg';
 import { ReactComponent as Vector } from '../../images/Vector 4.svg';
 import { ReactComponent as HeartIcon } from '../../images/heart.svg';
 import { ReactComponent as HeartIconBlue } from '../../images/heart-blue.svg';
