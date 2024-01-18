@@ -8,7 +8,7 @@ export const Layout = () => {
     <Home>
       <Header>
         <li>
-          <StyledLink to="/">Home page</StyledLink>
+          <StyledLink to="/">Home</StyledLink>
         </li>
         <li>
           <StyledLink to="/catalog">Catalog</StyledLink>

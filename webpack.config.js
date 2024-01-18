@@ -21,11 +21,11 @@ module.exports = {
         },
       },
     ],
-    rules: [
-      {
-        test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
-      },
-    ],
+    // rules: [
+    //   {
+    //     test: /\.css$/i,
+    //     use: [MiniCssExtractPlugin.loader, "css-loader"],
+    //   },
+    // ],
   },
 };

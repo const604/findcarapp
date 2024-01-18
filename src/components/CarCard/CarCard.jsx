@@ -1,6 +1,6 @@
-import { Suspense, useRef } from 'react';
-import { useEffect, useState } from 'react';
-import { Outlet, useParams, useLocation } from 'react-router-dom';
+import { Suspense } from 'react';
+import { useState } from 'react';
+import { Outlet} from 'react-router-dom';
 import {
   ImgContainer,
   InfoBlock,
