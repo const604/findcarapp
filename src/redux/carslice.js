@@ -1,7 +1,7 @@
 import { handleFulfilled, handlePending, handleRejected } from './handlers';
 
 const { createSlice } = require('@reduxjs/toolkit');
-const { getCars, updateCar } = require('./operations');
+const { getCars } = require('./operations');
 
 const initialState = {
   cars: [],
